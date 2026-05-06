@@ -200,3 +200,9 @@ have a 0.1% twin rate** — essentially zero. This makes sense in hindsight: you
 put two machines inside a small shop, and the Superpop format is constrained by
 indoor space. The clustering picked this up purely from text embeddings, without
 any explicit indoor flag in the model.
+
+The interactive map is just a starting point. The natural next step of this concept 
+is to combine each locker's text embedding with its geographic coordinates and train 
+a spatial model that predicts **where on the map the next twin should be placed** — 
+not just which cluster type is worth doubling, but the exact location. This would 
+turn a descriptive analysis into an actionable site-selection tool.
