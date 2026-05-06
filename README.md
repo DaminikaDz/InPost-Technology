@@ -83,8 +83,8 @@ suggesting strong last-mile demand in urban housing areas.
 
 ### Interactive visualizations
 
-- 🗺️ [Interactive map — all lockers clustered across Poland](https://TWOJNICK.github.io/InPost-Technology/07b_map.html)
-- 📊 [Bubble chart — cluster size vs twin rate](https://TWOJNICK.github.io/InPost-Technology/07c_scatter.html)
+- 🗺️ [Interactive map — all lockers clustered across Poland](https://DaminikaDz.github.io/InPost-Technology/docs/07b_map.html)
+- 📊 [Bubble chart — cluster size vs twin rate](https://DaminikaDz.github.io/InPost-Technology/docs/07c_scatter.html)
 
 ### Screenshots
 
