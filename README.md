@@ -57,21 +57,21 @@ A full data pipeline from raw API → embeddings → clusters → business insig
 | Cluster | Name | Twin rate |
 |---|---|---|
 | 13 | Lidl | 23.3% 🔴 |
-| 14 | Zintegrowany ze sklepem | 23.3% 🔴 |
-| 9  | Stacja paliw | 19.3% 🔴 |
-| 10 | Przy budynku mieszkalnym / bloku | 17.5% 🟠 |
+| 14 | Store-integrated | 23.3% 🔴 |
+| 9  | Fuel station | 19.3% 🔴 |
+| 10 | Residential building | 17.5% 🟠 |
 | 11 | InPost Next | 15.9% 🟠 |
-| 1  | Lokalizacje różne | 15.7% 🟠 |
-| 5  | Hipermarket | 14.1% 🟠 |
-| 7  | Parking ogólny | 13.0% 🟠 |
-| 6  | Myjnia samochodowa | 12.8% 🟠 |
-| 15 | Sklep convenience | 10.8% 🟠 |
+| 1  | Mixed locations | 15.7% 🟠 |
+| 5  | Hypermarket | 14.1% 🟠 |
+| 7  | General parking | 13.0% 🟠 |
+| 6  | Car wash | 12.8% 🟠 |
+| 15 | Convenience store | 10.8% 🟠 |
 | 0  | Dino | 10.4% 🟠 |
-| 4  | Parking przy sklepie | 8.9% 🔵 |
-| 8  | Posesja prywatna | 5.8% 🔵 |
-| 2  | Sklep osiedlowy | 4.3% 🔵 |
-| 12 | OSP | 1.9% 🔵 |
-| 3  | Superpop (wewnątrz sklepu) | 0.1% 🔵 |
+| 4  | Shop parking | 8.9% 🔵 |
+| 8  | Private property | 5.8% 🔵 |
+| 2  | Local grocery store | 4.3% 🔵 |
+| 12 | Volunteer fire station (OSP) | 1.9% 🔵 |
+| 3  | Superpop (inside store) | 0.1% 🔵 |
 
 ### Key finding
 
