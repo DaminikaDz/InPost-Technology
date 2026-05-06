@@ -132,22 +132,25 @@ cd InPost-Technology
 
 pip install -r requirements.txt
 
-# 1. Fetch data from InPost API (~32k points, cached locally after first run)
+# 1. Explore & fetch data from InPost API (saves to operating_points.json)
+python explore_api.py
+
+# 2. Prepare data
 python 00_prepare_data.py
 
-# 2. Build text embeddings (slow on first run, cached)
+# 3. Build text embeddings (slow on first run, cached)
 python 01_build_embeddings.py
 
-# 3. Engineer features
+# 4. Engineer features
 python 02_build_features.py
 
-# 4. Cluster
+# 5. Cluster
 python 03_cluster.py
 
-# 5. Describe clusters
+# 6. Describe clusters
 python 04_describe_clusters.py
 
-# 6. Visualizations
+# 7. Visualizations
 python 05_visualize_umap.py
 python 06_elbow.py
 python 07a_twin_ranking.py
