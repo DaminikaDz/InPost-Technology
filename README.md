@@ -26,23 +26,33 @@ without needing transaction data.
 
 A full data pipeline from raw API → embeddings → clusters → business insights:
 
-1. **Data collection** (`00_prepare_data.py`)  
-   Fetches all Polish InPost points from the live API, caches results locally.
+0. **API exploration** (`explore_api.py`)  
+   Connects to the live InPost API, paginates through all Polish parcel points,
+   saves raw data to `all_points_cache.json` and produces `full_analysis.txt` —
+   a full breakdown of every API field (status, types, functions, location 
+   descriptions, twin flags, regional distribution). This step drives all 
+   subsequent feature engineering decisions and is the only step requiring 
+   internet access.
+
+1. **Data preparation** (`00_prepare_data.py`)  
+   Filters Operating-status points, extracts the fields selected during 
+   exploration: location description, machine type, indoor flag, 24/7 status, 
+   coordinates, and the `apm_doubled` twin indicator.
 
 2. **Text embeddings** (`01_build_embeddings.py`)  
-   Encodes each locker's location description using a multilingual sentence transformer,
-   capturing semantic meaning of Polish location text.
+   Encodes each locker's location description using a multilingual sentence 
+   transformer, capturing semantic meaning of Polish location text.
 
 3. **Feature engineering** (`02_build_features.py`)  
-   Combines embeddings with structured features: indoor flag, 24/7 availability,
+   Combines embeddings with structured features: indoor flag, 24/7 availability, 
    machine type, coordinates.
 
 4. **Clustering** (`03_cluster.py`)  
-   K-Means (k=16) on the combined feature space. Number of clusters selected by
+   K-Means (k=16) on the combined feature space. Number of clusters selected by 
    iterative elbow analysis and manual coherence review across k=12–17.
 
 5. **Cluster description** (`04_describe_clusters.py`)  
-   Generates a human-readable summary of each cluster: top location descriptions,
+   Generates a human-readable summary of each cluster: top location descriptions, 
    machine type distribution, indoor/24h rates, twin rates, and regional breakdown.
 
 6. **Visualizations** (`05`, `06`, `07a/b/c`)  
@@ -51,7 +61,7 @@ A full data pipeline from raw API → embeddings → clusters → business insig
    - Bar chart: twin rate per cluster (expansion priority ranking)  
    - Interactive map of Poland with all lockers (Folium)  
    - Interactive bubble chart: cluster size vs twin rate (Plotly)
-
+   
 ### The 16 location archetypes
 
 | Cluster | Name | Twin rate |
